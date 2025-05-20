@@ -32,6 +32,7 @@ class MyHomepage extends  StatefulWidget {
 }
 
 class MyHomepageUI extends State<MyHomepage> { //extends eta inheritancee arki
+  int count_number = 0 ;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -39,12 +40,19 @@ class MyHomepageUI extends State<MyHomepage> { //extends eta inheritancee arki
     return Scaffold(
       appBar: AppBar(title: Text('Counter APP'),),
        body:  Center(
-          child: Text('Couting Number '),
+          child: Text(count_number.toString()), // string convert kore  disi
+
        ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: ()  {
+          //on presss amra jeokhon press krobo counting korbo
+            setState(() {   // set staet ui take update kortesa  ow automatcally update kore
 
+              count_number = count_number +1 ;
+            });
+
+           // print(count_number);
           },
       ),
     );
