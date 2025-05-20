@@ -39,12 +39,15 @@ class MyHomepageUI extends State<MyHomepage> { //extends eta inheritancee arki
    // throw UnimplementedError();
     return Scaffold(
       appBar: AppBar(title: Text('Counter APP'),),
+       backgroundColor: Colors.amber,
+
        body:  Center(
           child: Text(count_number.toString()), // string convert kore  disi
 
        ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
+          backgroundColor: Colors.red,
           onPressed: ()  {
           //on presss amra jeokhon press krobo counting korbo
             setState(() {   // set staet ui take update kortesa  ow automatcally update kore
@@ -52,7 +55,7 @@ class MyHomepageUI extends State<MyHomepage> { //extends eta inheritancee arki
               count_number = count_number +1 ;
             });
 
-           // print(count_number);
+           print(count_number);
           },
       ),
     );
